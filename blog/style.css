@@ -29,10 +29,10 @@ h3 { }
 
 p, ul, ol {
 	margin-top: 0;
-	line-height: 240%;
+	line-height: 200%;
 	text-align: justify;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-	font-size: 11px;
+	font-size: 14px;
 }
 
 ul, ol { }
@@ -223,7 +223,7 @@ hr { display: none; }
 .post .meta {
 	margin: 0 0 3px 0;
 	padding: 2px 30px 2px 15px;
-	font: italic 10px Georgia, "Times New Roman", Times, serif;
+	font: italic 11px Georgia, "Times New Roman", Times, serif;
 	color: #B6ACA2;
 	border-bottom: 8px solid #51ACC1;
 }

@@ -24,11 +24,11 @@ Released   : 20090215
 		<div id="menu">
 			<ul>
 				<li class="current_page_item"><a href="#">我的博客</a></li>
-				<li><a href="#">C语言</a></li>
-				<li><a href="#">OC语言</a></li>
-				<li><a href="#">UI随记</a></li>
-				<li><a href="#">项目</a></li>
-				<li><a href="#">杂谈</a></li>
+				<li><a href="#">C语言篇</a></li>
+				<li><a href="#">OC语言篇</a></li>
+				<li><a href="#">UI篇</a></li>
+				<li><a href="#">项目篇</a></li>
+				<li><a href="#">杂谈篇</a></li>
 			</ul>
 		</div>
 		<!-- end #menu -->
@@ -54,21 +54,55 @@ Released   : 20090215
 	<!-- end #logo -->
 	<div id="content">
 		<div class="post">
-			<h2 class="title">Welcome to Bounderies</h2>
-			<p class="meta"><em>{ Posted by <a href="#">admin</a> on March 10, 2008 }</em></p>
+			<h2 class="title">三大特性</h2>
+			<p class="meta"><em>{ 发表于 <a href="#">junior Young</a> on March 10, 2015 }</em></p>
 			<div class="entry">
-				<p>This is <strong>Bounderies</strong>, a free, fully standards-compliant CSS template designed by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>, released for free under the <a href="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attribution 2.5</a> license. You're free to use this template for anything as long as you link back to <a href="http://www.freecsstemplates.org/">my site</a>. Enjoy :)</p>
-				<p>Sed lacus. Donec lectus. Nullam pretium nibh ut turpis. Nam bibendum. In nulla tortor, elementum ipsum. Proin imperdiet est. Phasellus dapibus semper urna. Pellentesque ornare, orci in felis. Donec ut ante. In id eros. Suspendisse lacus turpis, cursus egestas at sem.Sed lacus. Donec lectus. Nullam pretium nibh ut turpis. Nam bibendum. In nulla tortor, elementum ipsum.</p>
-				<p class="links"><a href="#" class="comments">Comments (64)</a> &nbsp;&nbsp;&nbsp; <a href="#" class="permalink">Full article</a></p>
+				<p><strong>1.封装_点语法</strong></p>
+				<p>1> 本质</p>
+<p>//以下代码有什么问题</p>
+<p>- (void)setName:(NSString *)name {</p>
+ <p> self.name = name;  </p>
+<p>}</p>
+<p>- (NSString *)name {</p>
+ <p> return self.name;</p>
+<p>}</p>
+
+<p>点语法的本质是调用类的getter方法和setter方法，如果类中没有getter方法和setter方法就不能使用点语法。</p>
+				<p><strong>2.继承</strong></p>
+				<p>1> 如何实现多重继承</p>
+<p>消息转发    forwardingTargetForSelector   methodSignatureForSelector   forwardInvocation</p>
+<p>delegate和protocol </p>
+ <p> 类别 </p>
+<p class="links"><a href=http://www.cocoachina.com/ios/20130528/6295.html class="comments">多继承链接</a></p>
+<p><strong>3.多态</strong></p>
+				<p>1>什么多态</p>
+				<p>多态：不同对象以自己的方式响应相同的消息的能力叫做多态。</p>
+				<p>由于每个类都属于该类的名字空间，这使得多态称为可能。</p><p>类定义中的名字和类定义外的名字并不会冲突。类的实例变量和类方法有如下特点：</p><p>
+----1、和C语言中结构体中的数据成员一样，类的实例变量也位于该类独有的名字空间。</p><p>
+----2、类方法也同样位于该类独有的名字空间。与C语言中的方法名不同，类的方法名并不是一个全局符号。一个类中的方法名不会和其他类中同样的方法名冲突。两个完全不同的类可以实现同一个方法。
+</p><p>方法名是对象接口的一部分。对象收到的消息的名字就是调用的方法的名字。因为不同的对象可以有同名的方法，所以对象必须能理解消息的含义。同样的消息发给不同的对象，导致的操作并不相同。
+ </p><p> 多态的主要好处就是简化了编程接口。它容许在类和类之间重用一些习惯性的命名，而不用为每一个新加的函数命名一个新名字。这样，编程接口就是一些抽象的行为的集合，从而和实现接口的类区分开来。
+  </p><p>Objective-C支持方法名的多态，但不支持参数和操作符的多态。</p>
+  <p>2> OC中如何实现多态</p>
+				<p> 在Objective-C中是通过一个叫做selector的选取器实现的。在Objective-C中，selector有两个意思， 当用在给对象的源码消息时，用来指方法的名字。它也指那个在源码编译后代替方法名的唯一的标识符。 编译后的选择器的类型是SEL有同样名字的方法、也有同样的选择器。你可以使用选择器来调用一个对象的方法。</p>
+				<p>选取器有以下特点：</p><p>
+----1、所有同名的方法拥有同样的选取器</p><p>
+----2、所有的选取器都是不一样的
+</p>
 			</div>
 		</div>
 		<div class="post">
-			<h2 class="title">Lorem ipsum sed aliquam</h2>
-			<p class="meta"><em>{ Posted by <a href="#">admin</a> on March 8, 2008 }</em></p>
+			<h2 class="title">类和对象</h2>
+			<p class="meta"><em>{ 发表于 <a href="#">junior Young</a> on March 10, 2015 }</em></p>
 			<div class="entry">
-				<p>Sed lacus. Donec lectus. Nullam pretium nibh ut turpis. Nam bibendum. In nulla tortor, elementum vel, tempor at, varius non, purus. Mauris vitae nisl nec metus placerat consectetuer. Donec ipsum. Proin imperdiet est. Phasellus <a href="#">dapibus semper urna</a>. Pellentesque ornare, orci in consectetuer hendrerit, urna elit eleifend nunc, ut consectetuer nisl felis ac diam. Etiam non felis. Donec ut ante. In id eros. Suspendisse lacus turpis, cursus egestas at sem. Phasellus pellentesque. Mauris quam enim, molestie in, rhoncus ut, lobortis a, est.</p>
-				<p>Pellentesque pede. Donec pulvinar ullamcorper metus. In eu odio at lectus pulvinar mollis. Vestibulum sem magna, elementum ut, vestibulum eu, facilisis quis, arcu. Mauris a dolor. Nulla facilisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed blandit. Phasellus pellentesque, ante nec iaculis dapibus, eros justo auctor lectus, a lobortis lorem mauris quis nunc. Praesent pellentesque facilisis elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. In hac habitasse platea dictumst. Nullam id ante eget dui vulputate aliquam. </p>
-				<p class="links"><a href="#" class="comments">Comments (64)</a> &nbsp;&nbsp;&nbsp; <a href="#" class="permalink">Full article</a></p>
+				<p>2> 继承和类别的区别
+1> 使用继承:
+1.1> 添加新方法和父类方法一致,但父类方法仍需要使用
+1.2> 添加新属性
+2> 类别:
+2.1> 针对系统提供的一些类,系统本身不提倡继承,因为这些类的内部实现对继承有所限制(NSString initWithFormat继承崩溃)
+2.2> 类别可以将自己构建的类中的方法进行分组,对于大型的类,提高可维护性</p>
+				
 			</div>
 		</div>
 	</div>
@@ -76,15 +110,22 @@ Released   : 20090215
 	<div id="sidebar">
 		<ul>
 			<li>
-				<h2>Aliquam tempus</h2>
-				<p>Mauris vitae nisl nec metus placerat perdiet est. Phasellus dapibus semper urna. Pellentesque ornare, orci in consectetuer hendrerit, volutpat.</p>
+				<h2>学习笔记</h2>
+				<p>以动手实践为荣，以只看不练为耻。</p>
+<p>以打印日志为荣，以出错不报为耻。</p>
+<p>以局部变量为荣，以全局变量为耻。</p>
+<p>以单元测试为荣，以手工测试为耻。</p>
+<p>以代码重用为荣，以复制粘贴为耻。</p>
+<p>以多态应用为荣，以分支判断为耻。</p>
+<p>以定义常量为荣，以魔法数字为耻。</p>
+<p>以总结思考为荣，以不求甚解为耻。</p>
 			</li>
 			<li id="calendar">
-				<h2>Calendar</h2>
+				<h2>日历</h2>
 				<div id="calendar_wrap">
 					<table summary="Calendar">
 						<caption>
-						February 2009
+						December 2015
 						</caption>
 						<thead>
 							<tr>
@@ -155,8 +196,8 @@ Released   : 20090215
 				</div>
 			</li>
 			<li>
-				<h2>Turpis nulla</h2>
-				<ul>			<li><a href="#">Nec metus sed donec</a></li>
+				<h2>目录</h2>
+				<ul>			<li><a href="#">三大特性、类及对象易错点</a></li>
 			<li><a href="#">Magna lacus bibendum mauris</a></li>
 			<li><a href="#">Velit semper nisi molestie</a></li>
 			<li><a href="#">Eget tempor eget nonummy</a></li>
